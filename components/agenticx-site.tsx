@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowUpRight, ChevronDown, Menu, X, Network, BrainCircuit, Sparkles } from 'lucide-react'
 
 export const nav = [
@@ -14,7 +14,16 @@ export const nav = [
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
-  return <header className="site-nav">
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const updateScrollState = () => setScrolled(window.scrollY > 32)
+    updateScrollState()
+    window.addEventListener('scroll', updateScrollState, { passive: true })
+    return () => window.removeEventListener('scroll', updateScrollState)
+  }, [])
+
+  return <header className={`site-nav${scrolled ? ' is-scrolled' : ''}`}>
     <div className="nav-inner">
       <Link href="/" className="brand" onClick={() => setOpen(false)}><span className="brand-mark">A</span><span>AGENTIC<span className="brand-x">X</span></span></Link>
       <nav className="desktop-nav">{nav.map(item => <div className="nav-group" key={item.label}><button>{item.label}<ChevronDown size={13}/></button><div className="nav-menu">{item.items.map(([label, href]) => <Link key={href} href={href}><span>{label}</span><ArrowUpRight size={14}/></Link>)}</div></div>)}</nav>
