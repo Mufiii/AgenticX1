@@ -21,7 +21,7 @@ export default function PersonalizedAgentsPage() {
     <SiteShell>
       <PersonalizedAgentsHero />
       <AgentEvolution />
-      <ConceptualShift />
+      {/* <ConceptualShift /> */}
       <PersonalizationPillars />
       <AgentNetwork />
       <HumanJourneys />

@@ -90,35 +90,7 @@ export function AgentEvolution() {
             ))}
           </div>
 
-          <div
-            key={active.id}
-            role="tabpanel"
-            id="evolution-panel"
-            aria-labelledby={`evolution-tab-${active.id}`}
-            className="pa-detail-enter mt-8 border-t border-white/[0.08] pt-8 lg:mt-16 lg:pt-10"
-          >
-            <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-              <div>
-                <p className="text-[11px] tracking-[0.28em] text-[#c4b5fd]">{active.number}</p>
-                <h3 className="mt-3 text-[clamp(1.8rem,3vw,2.8rem)] font-medium leading-[1.08] tracking-[-0.035em]">
-                  {active.title}
-                </h3>
-                {active.vision ? (
-                  <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-white/40">
-                    Long-term vision
-                  </p>
-                ) : null}
-                <p className="mt-5 max-w-xl text-[16px] leading-7 text-white/55">{active.description}</p>
-              </div>
-
-              <blockquote className="border-l border-[#8B5CF6]/50 pl-6">
-                <p className="text-[10px] uppercase tracking-[0.28em] text-white/35">Model</p>
-                <p className="mt-4 text-[clamp(1.2rem,2vw,1.65rem)] font-medium leading-snug tracking-[-0.03em] text-white/90">
-                  “{active.model}”
-                </p>
-              </blockquote>
-            </div>
-          </div>
+   
         </div>
       </div>
     </section>
