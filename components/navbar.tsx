@@ -117,7 +117,7 @@ export function Navbar() {
       <div className="nav-inner">
         <div className="nav-left">
           <Link href="/" className="brand" aria-label="AgenticX" onClick={() => setOpen(false)}>
-            <Image src="/agenticX.png" alt="AgenticX" width={226} height={44} priority className="brand-logo" />
+            <Image src="/agenticX.png" alt="AgenticX" width={186} height={36} priority className="brand-logo" />
           </Link>
         </div>
 
