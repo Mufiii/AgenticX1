@@ -1,0 +1,91 @@
+import Link from 'next/link'
+import { ArrowUpRight } from 'lucide-react'
+import { RoadmapOrb, type RoadmapVariant } from '@/components/roadmap-orb'
+import { SectionLabel } from '@/components/section-label'
+
+const journeyMilestones: Array<{
+  year: string
+  phase: string
+  title: string
+  subtitle: string
+  description: string
+  color: string
+  variant: RoadmapVariant
+  href: string
+}> = [
+  {
+    year: '2026',
+    phase: 'TODAY',
+    title: 'Agentic Brain',
+    subtitle: 'PERSONALIZED INTELLIGENCE THAT ACTS.',
+    description: 'AI that understands your context, goals and workflows — then reasons, plans and acts alongside you.',
+    color: '#6D35F5',
+    variant: 'agentic',
+    href: '/products/agentic-brain',
+  },
+  {
+    year: '2030',
+    phase: 'NEXT PHASE',
+    title: 'AI Digital Twin',
+    subtitle: 'INTELLIGENCE THAT MIRRORS YOU.',
+    description:
+      'A persistent digital counterpart capable of representing your knowledge, preferences, capabilities and decision patterns across contexts.',
+    color: '#6D35F5',
+    variant: 'digital-twin',
+    href: '/products/ai-digital-twin',
+  },
+  {
+    year: '2033',
+    phase: 'BEYOND',
+    title: 'Photonic Brain',
+    subtitle: 'INTELLIGENCE AT THE SPEED OF LIGHT.',
+    description:
+      'Exploring photonic computing as a pathway toward radically faster, more energy-efficient intelligence and new computational architectures.',
+    color: '#6D35F5',
+    variant: 'photonic',
+    href: '/products/photonic-brain',
+  },
+]
+
+export function JourneySection() {
+  return (
+    <section className="journey-section relative overflow-hidden bg-[#050711]" id="journey">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 72% 52% at 50% 58%, rgba(99, 91, 255, 0.12), transparent 70%), radial-gradient(ellipse 40% 36% at 16% 42%, rgba(167, 139, 250, 0.07), transparent 64%), radial-gradient(ellipse 40% 36% at 84% 42%, rgba(124, 92, 255, 0.07), transparent 64%)',
+        }}
+      />
+      <div className="journey-heading">
+        <SectionLabel>OUR JOURNEY</SectionLabel>
+        <h2>
+          From Intelligence to{' '}
+          <em className="bg-gradient-to-r from-[#a78bfa] to-[#7c5cff] bg-clip-text text-transparent">
+            What&apos;s Next
+          </em>
+        </h2>
+        <p>A long-term vision to build personalized, persistent and radically faster intelligence for everyone.</p>
+      </div>
+      <div className="journey-timeline">
+        {journeyMilestones.map((milestone) => (
+          <article className="journey-milestone" key={milestone.year}>
+            <div className="milestone-meta">
+              <strong>{milestone.year}</strong>
+              <span>{milestone.phase}</span>
+            </div>
+            <div className="milestone-node" style={{ '--node-color': milestone.color } as React.CSSProperties} />
+            <RoadmapOrb year={milestone.year} color={milestone.color} variant={milestone.variant} />
+            <h3>{milestone.title}</h3>
+            <span className="milestone-subtitle">{milestone.subtitle}</span>
+            <p>{milestone.description}</p>
+            <Link href={milestone.href} className="journey-learn-more">
+              Learn More <ArrowUpRight size={15} aria-hidden="true" />
+            </Link>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}

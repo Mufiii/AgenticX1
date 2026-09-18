@@ -21,7 +21,7 @@ export function InnovationStudios() {
   return (
     <CampusSection>
       <div className="max-w-[720px]" data-campus-reveal>
-        <h2 className="text-[clamp(2.25rem,4.8vw,4.375rem)] font-normal leading-[1.05] tracking-[-0.06em]">
+        <h2 className="text-[clamp(2.25rem,4.8vw,4.375rem)] font-normal leading-[1.02] tracking-[-0.035em]">
           From Theory to <em className="not-italic text-[#c4b5fd]">Experimentation</em>
         </h2>
         <p className="mt-6 max-w-[520px] text-[16px] leading-[1.7] text-[#9b979e]">
@@ -63,7 +63,7 @@ export function InnovationStudios() {
                     0{index + 1}
                   </span>
                   <span
-                    className={`mt-2 block text-[18px] tracking-[-0.03em] transition-colors duration-300 sm:text-[20px] ${
+                    className={`mt-2 block text-[18px] tracking-[-0.02em] transition-colors duration-300 sm:text-[20px] ${
                       isActive ? 'text-white' : 'text-[#8f8a94]'
                     }`}
                   >

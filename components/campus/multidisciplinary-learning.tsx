@@ -7,7 +7,7 @@ export function MultidisciplinaryLearning() {
   return (
     <CampusSection tone="light">
       <div className="max-w-[680px]" data-campus-reveal>
-        <h2 className="text-[clamp(2.25rem,4.8vw,4.375rem)] font-normal leading-[1.05] tracking-[-0.06em]">
+        <h2 className="text-[clamp(2.25rem,4.8vw,4.375rem)] font-normal leading-[1.02] tracking-[-0.035em]">
           Innovation Happens at the <em className="not-italic text-[#6354c9]">Intersection</em>
         </h2>
         <p className="mt-6 max-w-[440px] text-[16px] leading-[1.7] text-[#6d6b76]">
@@ -24,7 +24,7 @@ export function MultidisciplinaryLearning() {
           {inbound.map((item) => (
             <li
               key={item}
-              className="flex items-center justify-between bg-[#fafaf9] px-0 py-4 text-[18px] tracking-[-0.03em] text-[#17151c] lg:justify-end lg:gap-4 lg:py-0 lg:text-[20px]"
+              className="flex items-center justify-between bg-[#fafaf9] px-0 py-4 text-[18px] tracking-[-0.02em] text-[#17151c] lg:justify-end lg:gap-4 lg:py-0 lg:text-[20px]"
             >
               <span>{item}</span>
               <span className="hidden h-px w-10 bg-[#6D35F5]/40 lg:block" aria-hidden="true" />
@@ -33,7 +33,7 @@ export function MultidisciplinaryLearning() {
         </ul>
 
         <div className="order-last border border-[#d9d6df] px-8 py-10 text-center lg:order-2 lg:px-10 lg:py-14">
-          <p className="text-[22px] leading-[1.25] tracking-[-0.04em] text-[#17151c] sm:text-[26px] lg:text-[28px]">
+          <p className="text-[22px] leading-[1.25] tracking-[-0.025em] text-[#17151c] sm:text-[26px] lg:text-[28px]">
             AI + Human Intelligence + Innovation
           </p>
         </div>
@@ -42,7 +42,7 @@ export function MultidisciplinaryLearning() {
           {outbound.map((item) => (
             <li
               key={item}
-              className="flex items-center justify-between bg-[#fafaf9] px-0 py-4 text-[18px] tracking-[-0.03em] text-[#17151c] lg:justify-start lg:gap-4 lg:py-0 lg:text-[20px]"
+              className="flex items-center justify-between bg-[#fafaf9] px-0 py-4 text-[18px] tracking-[-0.02em] text-[#17151c] lg:justify-start lg:gap-4 lg:py-0 lg:text-[20px]"
             >
               <span className="hidden h-px w-10 bg-[#6D35F5]/40 lg:block" aria-hidden="true" />
               <span>{item}</span>

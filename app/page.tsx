@@ -1,5 +1,18 @@
-import { HomePage } from '@/components/agenticx-site'
+import BookPreorderSection from '@/components/BookPreorderSection'
+import FAQSection from '@/components/FAQSection'
+import { HeroSection } from '@/components/hero-section'
+import { JourneySection } from '@/components/journey-section'
+import { ProductSection } from '@/components/product-section'
+import { SiteShell } from '@/components/site-shell'
 
 export default function Page() {
-  return <HomePage />
+  return (
+    <SiteShell>
+      <HeroSection />
+      <JourneySection />
+      <ProductSection />
+      <BookPreorderSection/>
+      <FAQSection/>
+    </SiteShell>
+  )
 }

@@ -14,7 +14,7 @@ export function StartupPathway() {
   return (
     <CampusSection>
       <div className="max-w-[680px]" data-campus-reveal>
-        <h2 className="text-[clamp(2.25rem,4.8vw,4.375rem)] font-normal leading-[1.05] tracking-[-0.06em]">
+        <h2 className="text-[clamp(2.25rem,4.8vw,4.375rem)] font-normal leading-[1.02] tracking-[-0.035em]">
           Turn Ideas Into <em className="not-italic text-[#c4b5fd]">Ventures</em>
         </h2>
         <p className="mt-6 max-w-[520px] text-[16px] leading-[1.7] text-[#9b979e]">
@@ -41,7 +41,7 @@ export function StartupPathway() {
                 {String(index + 1).padStart(2, '0')}
               </span>
               <span
-                className={`pt-1 text-[16px] tracking-[-0.03em] lg:pt-4 lg:text-[17px] ${
+                className={`pt-1 text-[16px] tracking-[-0.015em] lg:pt-4 lg:text-[17px] ${
                   isOutcome ? 'text-white' : 'text-[#c7c4ca]'
                 }`}
               >

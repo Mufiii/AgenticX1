@@ -1,0 +1,131 @@
+@keyframes qaq-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes qaq-line-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes qaq-line-drift {
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+
+@keyframes qaq-node-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes qaq-core-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.18);
+  }
+  50% {
+    box-shadow: 0 0 0 18px rgba(139, 92, 246, 0);
+  }
+}
+
+@keyframes qaq-passport-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.qaq-passport-card {
+  animation: qaq-passport-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.qaq-network-spoke,
+.qaq-network-link {
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  animation: qaq-line-draw 1.6s ease forwards;
+}
+
+.qaq-network-link {
+  animation-delay: 0.35s;
+}
+
+.qaq-network-flow {
+  stroke-dasharray: 4 10;
+  animation: qaq-line-drift 8s linear infinite;
+}
+
+.qaq-network-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: qaq-node-pulse 4.8s ease-in-out infinite;
+}
+
+.qaq-network-node:nth-child(2n) {
+  animation-delay: 0.6s;
+}
+
+.qaq-network-node:nth-child(3n) {
+  animation-delay: 1.2s;
+}
+
+.qaq-core-pulse {
+  animation: qaq-core-glow 4.4s ease-in-out infinite;
+}
+
+.qaq-journey-stage {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.qaq-journey.is-visible .qaq-journey-stage,
+.qaq-journey.qaq-reduced .qaq-journey-stage {
+  animation: qaq-fade-up 0.7s ease forwards;
+}
+
+.qaq-journey.is-visible .qaq-journey-stage:nth-child(1) { animation-delay: 0.05s; }
+.qaq-journey.is-visible .qaq-journey-stage:nth-child(2) { animation-delay: 0.16s; }
+.qaq-journey.is-visible .qaq-journey-stage:nth-child(3) { animation-delay: 0.27s; }
+.qaq-journey.is-visible .qaq-journey-stage:nth-child(4) { animation-delay: 0.38s; }
+.qaq-journey.is-visible .qaq-journey-stage:nth-child(5) { animation-delay: 0.49s; }
+.qaq-journey.is-visible .qaq-journey-stage:nth-child(6) { animation-delay: 0.6s; }
+
+.qaq-journey.qaq-reduced .qaq-journey-stage {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qaq-passport-card,
+  .qaq-network-spoke,
+  .qaq-network-link,
+  .qaq-network-flow,
+  .qaq-network-node,
+  .qaq-core-pulse,
+  .qaq-journey-stage {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+    stroke-dashoffset: 0;
+  }
+}

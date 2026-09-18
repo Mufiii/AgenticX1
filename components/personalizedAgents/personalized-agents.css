@@ -1,0 +1,93 @@
+@keyframes pa-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pa-line-flow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes pa-soft-pulse {
+  0%,
+  100% {
+    opacity: 0.32;
+  }
+  50% {
+    opacity: 0.78;
+  }
+}
+
+@keyframes pa-core-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(139, 92, 246, 0);
+  }
+}
+
+@keyframes pa-node-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.pa-detail-enter {
+  animation: pa-fade-up 0.42s ease;
+}
+
+.pa-hero-step {
+  animation: pa-fade-up 0.55s ease both;
+}
+
+.pa-hero-step:nth-child(1) {
+  animation-delay: 0.04s;
+}
+.pa-hero-step:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.pa-hero-step:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.pa-hero-step:nth-child(4) {
+  animation-delay: 0.22s;
+}
+.pa-hero-step:nth-child(5) {
+  animation-delay: 0.28s;
+}
+
+.pa-flow-line {
+  stroke-dasharray: 5 14;
+  animation: pa-line-flow 7s linear infinite, pa-soft-pulse 4.4s ease-in-out infinite;
+}
+
+.pa-core-pulse {
+  animation: pa-core-pulse 4.2s ease-in-out infinite;
+}
+
+.pa-orbit-ring {
+  animation: pa-node-glow 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pa-detail-enter,
+  .pa-hero-step,
+  .pa-flow-line,
+  .pa-core-pulse,
+  .pa-orbit-ring {
+    animation: none;
+  }
+}

@@ -1,0 +1,115 @@
+@keyframes pg-line-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pg-line-drift {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes pg-node-pulse {
+  0%,
+  100% {
+    opacity: 0.62;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes pg-core-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 91, 255, 0.22);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(99, 91, 255, 0);
+  }
+}
+
+@keyframes pg-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.pg-network-spoke,
+.pg-network-link {
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
+  animation: pg-line-draw 1.7s ease forwards;
+}
+
+.pg-network-link {
+  animation-delay: 0.28s;
+}
+
+.pg-network-flow {
+  stroke-dasharray: 3.5 9;
+  animation: pg-line-drift 9s linear infinite;
+}
+
+.pg-network-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pg-node-pulse 5s ease-in-out infinite;
+}
+
+.pg-network-node:nth-child(2n) {
+  animation-delay: 0.7s;
+}
+
+.pg-network-node:nth-child(3n) {
+  animation-delay: 1.4s;
+}
+
+.pg-core-pulse {
+  animation: pg-core-glow 4.6s ease-in-out infinite;
+}
+
+.pg-journey-stage {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.pg-journey.is-visible .pg-journey-stage,
+.pg-journey.pg-reduced .pg-journey-stage {
+  animation: pg-fade-up 0.65s ease forwards;
+}
+
+.pg-journey.is-visible .pg-journey-stage:nth-child(1) { animation-delay: 0.04s; }
+.pg-journey.is-visible .pg-journey-stage:nth-child(2) { animation-delay: 0.14s; }
+.pg-journey.is-visible .pg-journey-stage:nth-child(3) { animation-delay: 0.24s; }
+.pg-journey.is-visible .pg-journey-stage:nth-child(4) { animation-delay: 0.34s; }
+.pg-journey.is-visible .pg-journey-stage:nth-child(5) { animation-delay: 0.44s; }
+.pg-journey.is-visible .pg-journey-stage:nth-child(6) { animation-delay: 0.54s; }
+
+.pg-journey.pg-reduced .pg-journey-stage {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pg-network-spoke,
+  .pg-network-link,
+  .pg-network-flow,
+  .pg-network-node,
+  .pg-core-pulse,
+  .pg-journey-stage {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+    stroke-dashoffset: 0;
+  }
+}

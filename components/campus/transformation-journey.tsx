@@ -6,7 +6,7 @@ export function TransformationJourney() {
   return (
     <CampusSection tone="light">
       <div className="mx-auto max-w-[720px] text-center" data-campus-reveal>
-        <h2 className="text-[clamp(2.25rem,5vw,4.375rem)] font-normal leading-[1.05] tracking-[-0.06em]">
+        <h2 className="text-[clamp(2.25rem,5vw,4.375rem)] font-normal leading-[1.02] tracking-[-0.035em]">
           The Transformation <em className="not-italic text-[#6354c9]">Journey</em>
         </h2>
       </div>
@@ -29,7 +29,7 @@ export function TransformationJourney() {
               <span className="text-[10px] font-bold tracking-[0.16em] text-[#6D35F5]">
                 0{index + 1}
               </span>
-              <h3 className="mt-1 text-[26px] font-normal tracking-[-0.045em] text-[#17151c] sm:text-[32px]">
+              <h3 className="mt-1 text-[26px] font-normal leading-[1.15] tracking-[-0.025em] text-[#17151c] sm:text-[32px]">
                 {stage}
               </h3>
             </div>
@@ -40,7 +40,7 @@ export function TransformationJourney() {
           <span className="relative z-[1] mt-6 size-6 shrink-0 rounded-full border-[3px] border-[#6D35F5] bg-[#6D35F5] lg:mx-auto lg:mt-0 lg:mb-5 lg:block" />
           <div className="flex-1 border border-[#6D35F5]/35 bg-white px-6 py-7 sm:px-8 sm:py-8 lg:text-center">
             <span className="text-[10px] font-bold tracking-[0.16em] text-[#6D35F5]">05</span>
-            <p className="mt-3 text-[clamp(1.5rem,3.2vw,2.5rem)] font-normal leading-[1.15] tracking-[-0.045em] text-[#17151c]">
+            <p className="mt-3 text-[clamp(1.5rem,3.2vw,2.5rem)] font-normal leading-[1.15] tracking-[-0.025em] text-[#17151c]">
               Entrepreneur / Researcher / Industry Leader
             </p>
           </div>

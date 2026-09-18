@@ -1,5 +1,5 @@
 import { CampusMotion } from '@/components/campus/campus-motion'
-import { CampusHero } from '@/components/campus/campus-hero'
+import CampusHero from '@/components/campus/campus-hero'
 import { CampusPathway } from '@/components/campus/campus-pathway'
 import { DeepTechLeadership } from '@/components/campus/deeptech-leadership'
 import { MultidisciplinaryLearning } from '@/components/campus/multidisciplinary-learning'
@@ -26,14 +26,14 @@ export default function CampusPage() {
         <CampusHero />
         <CampusPathway />
         <DeepTechLeadership />
-        <MultidisciplinaryLearning />
+        {/* <MultidisciplinaryLearning /> */}
         <InnovationStudios />
         <RealWorldProjects />
-        <StartupPathway />
-        <AgenticLearning />
-        <TransformationJourney />
+        {/* <StartupPathway /> */}
+        {/* <AgenticLearning /> */}
+        {/* <TransformationJourney /> */}
         <BeyondCertificates />
-        <CampusEcosystem />
+        {/* <CampusEcosystem /> */}
         <CampusCTA />
       </CampusMotion>
     </SiteShell>
