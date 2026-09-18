@@ -55,11 +55,11 @@ export function ProductSection() {
         tl.to(layers[0], { y: '-120%', duration: STEP })
 
         for (let i = 1; i < layers.length - 1; i++) {
-          tl.to(layers[i], { y: 0, duration: STEP * 0.35 }, '-=0.2')
-          tl.to(layers[i], { y: '-120%', duration: STEP * 0.65 })
+          tl.to(layers[i], { y: 0, duration: STEP * 0.25 }, '-=0.08')
+          tl.to(layers[i], { y: '-120%', duration: STEP * 0.75 })
         }
 
-        tl.to(layers[layers.length - 1], { y: 0, duration: STEP * 0.8 }, '-=0.2')
+        tl.to(layers[layers.length - 1], { y: 0, duration: STEP * 0.85 }, '-=0.08')
         tl.to({}, { duration: STEP * 0.2 })
 
         return () => {
@@ -70,11 +70,11 @@ export function ProductSection() {
       }
 
       mm.add('(min-width: 1181px) and (prefers-reduced-motion: no-preference)', () =>
-        buildPinnedTimeline(40),
+        buildPinnedTimeline(16),
       )
       mm.add(
         '(min-width: 801px) and (max-width: 1180px) and (prefers-reduced-motion: no-preference)',
-        () => buildPinnedTimeline(28),
+        () => buildPinnedTimeline(12),
       )
 
       return () => mm.revert()

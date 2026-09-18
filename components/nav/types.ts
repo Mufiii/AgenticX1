@@ -25,6 +25,10 @@ export type NavDropdown = {
   aliases?: string[]
   columns: DropdownColumn[]
   layout: 'solutions' | 'services' | 'product' | 'company'
+  media?: {
+    src: string
+    alt: string
+  }
 }
 
 export type NavItem = NavLink | NavDropdown
