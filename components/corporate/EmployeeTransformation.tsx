@@ -46,29 +46,29 @@ const capabilities = [
 
 export default function EmployeeTransformation() {
   return (
-    <section className="relative overflow-hidden bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
+    <section className="relative overflow-hidden bg-black px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-24">
       
       {/* Background decoration */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-40 -top-40 h-[420px] w-[420px] rounded-full bg-[#635BFF]/[0.05] blur-3xl" />
-        <div className="absolute -right-40 -top-40 h-[420px] w-[420px] rounded-full bg-[#8B5CF6]/[0.05] blur-3xl" />
+        <div className="absolute -left-40 -top-40 h-[420px] w-[420px] rounded-full bg-[#635BFF]/10 blur-3xl" />
+        <div className="absolute -right-40 -top-40 h-[420px] w-[420px] rounded-full bg-[#8B5CF6]/10 blur-3xl" />
 
-        <div className="absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full border border-[#635BFF]/[0.06]" />
-        <div className="absolute left-1/2 top-0 h-[650px] w-[1150px] -translate-x-1/2 rounded-full border border-[#635BFF]/[0.04]" />
+        <div className="absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full border border-white/10" />
+        <div className="absolute left-1/2 top-0 h-[650px] w-[1150px] -translate-x-1/2 rounded-full border border-white/[0.06]" />
       </div>
 
       <div className="relative mx-auto max-w-[1400px]">
 
         {/* Header */}
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-[clamp(2.25rem,4.5vw,3.625rem)] font-medium leading-[1.05] tracking-[-0.035em] text-[#11111A]">
+          <h2 className="text-[clamp(2.25rem,4.5vw,3.625rem)] font-medium leading-[1.05] tracking-[-0.035em] text-white">
             From Employees to{" "}
             <span className="bg-gradient-to-r from-[#4F6FFF] via-[#635BFF] to-[#A855F7] bg-clip-text text-transparent">
               AI-Powered Professionals
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-[#62677A] sm:text-lg">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/55 sm:text-lg">
             AI should not simply automate work. It should expand what people
             are capable of doing. AgenticX helps employees develop the skills,
             tools and intelligence required to work effectively alongside AI.
@@ -83,15 +83,15 @@ export default function EmployeeTransformation() {
             return (
               <div
                 key={item.title}
-                className="group relative min-h-[220px] overflow-hidden rounded-2xl border border-[#E5E8F2] bg-white/80 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#635BFF]/25 hover:shadow-[0_20px_50px_rgba(99,91,255,0.10)]"
+                className="group relative min-h-[220px] overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#635BFF]/40 hover:shadow-[0_20px_50px_rgba(99,91,255,0.12)]"
               >
                 {/* subtle number */}
-                <span className="absolute right-5 top-5 text-xs font-medium text-[#635BFF]/20">
+                <span className="absolute right-5 top-5 text-xs font-medium text-[#635BFF]/40">
                   0{index + 1}
                 </span>
 
                 {/* Icon */}
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#EEF1FF] to-[#F5F0FF]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/15 to-indigo-500/10">
                   <Icon
                     size={23}
                     strokeWidth={1.8}
@@ -100,11 +100,11 @@ export default function EmployeeTransformation() {
                 </div>
 
                 {/* Content */}
-                <h3 className="mt-6 text-[17px] font-medium tracking-[-0.015em] text-[#151522]">
+                <h3 className="mt-6 text-[17px] font-medium tracking-[-0.015em] text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#707589]">
+                <p className="mt-3 text-sm leading-6 text-white/55">
                   {item.description}
                 </p>
 
@@ -116,7 +116,7 @@ export default function EmployeeTransformation() {
         </div>
 
         {/* Transformation Journey */}
-        <div className="mt-7 rounded-3xl border border-[#E1E5F1] bg-gradient-to-r from-[#F9FAFF] via-white to-[#F8F7FF] px-6 py-8 sm:px-10 lg:px-12">
+        <div className="mt-7 rounded-3xl border border-white/[0.08] bg-white/[0.03] px-6 py-8 sm:px-10 lg:px-12">
           
           <div className="flex flex-col items-center justify-between gap-8 lg:flex-row">
 
@@ -128,7 +128,7 @@ export default function EmployeeTransformation() {
 
               <div className="mt-3 h-px w-5 bg-[#635BFF]/30" />
 
-              <p className="mt-4 max-w-[130px] text-[10px] font-medium uppercase leading-5 tracking-[0.2em] text-[#9297AA]">
+              <p className="mt-4 max-w-[130px] text-[10px] font-medium uppercase leading-5 tracking-[0.2em] text-white/40">
                 Same people.
                 <br />
                 A brighter tomorrow.
@@ -140,7 +140,7 @@ export default function EmployeeTransformation() {
 
               {/* Step 1 */}
               <div className="flex flex-1 flex-col items-center text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#EDF2FF]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#4F6FFF]/15">
                   <User
                     size={21}
                     strokeWidth={1.8}
@@ -148,11 +148,11 @@ export default function EmployeeTransformation() {
                   />
                 </div>
 
-                <h4 className="mt-3 text-sm font-medium text-[#181824]">
+                <h4 className="mt-3 text-sm font-medium text-white">
                   Employee
                 </h4>
 
-                <span className="mt-1 text-[9px] uppercase tracking-[0.2em] text-[#9A9FB1]">
+                <span className="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">
                   Does the work
                 </span>
               </div>
@@ -166,7 +166,7 @@ export default function EmployeeTransformation() {
 
               {/* Step 2 */}
               <div className="flex flex-1 flex-col items-center text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F0EEFF]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#635BFF]/15">
                   <UserRoundCog
                     size={21}
                     strokeWidth={1.8}
@@ -178,7 +178,7 @@ export default function EmployeeTransformation() {
                   AI-Enabled Professional
                 </h4>
 
-                <span className="mt-1 text-[9px] uppercase tracking-[0.2em] text-[#8C91A6]">
+                <span className="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">
                   Works with AI
                 </span>
               </div>
@@ -192,7 +192,7 @@ export default function EmployeeTransformation() {
 
               {/* Step 3 */}
               <div className="flex flex-1 flex-col items-center text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#EDE9FF] to-[#F3E9FF]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-violet-500/20 to-fuchsia-500/10">
                   <Users
                     size={21}
                     strokeWidth={1.8}
@@ -204,7 +204,7 @@ export default function EmployeeTransformation() {
                   AI-Powered Workforce
                 </h4>
 
-                <span className="mt-1 text-[9px] uppercase tracking-[0.2em] text-[#8C91A6]">
+                <span className="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">
                   Achieves more together
                 </span>
               </div>
