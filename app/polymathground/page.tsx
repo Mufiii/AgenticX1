@@ -2,7 +2,7 @@ import { ConnectionExamples } from '@/components/polymathground/ConnectionExampl
 import { CreationJourney } from '@/components/polymathground/CreationJourney'
 import { CTASection } from '@/components/polymathground/CTASection'
 import { KnowledgeUniverse } from '@/components/polymathground/KnowledgeUniverse'
-import { PolymathHero } from '@/components/polymathground/PolymathHero'
+import PolymathGroundHero from '@/components/polymathground/PolymathGroundHero'
 import { PolymathJourney } from '@/components/polymathground/PolymathJourney'
 import { ShiftSection } from '@/components/polymathground/ShiftSection'
 import { CampusMotion } from '@/components/campus/campus-motion'
@@ -21,7 +21,7 @@ export default function PolymathGroundPage() {
   return (
     <SiteShell>
       <CampusMotion>
-        <PolymathHero />
+        <PolymathGroundHero />
         <ShiftSection />
         <KnowledgeUniverse />
         <ConnectionExamples />

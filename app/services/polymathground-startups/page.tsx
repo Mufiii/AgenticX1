@@ -1,4 +1,9 @@
-import { ContentPage } from '@/components/content-page'
+
+import PolymathAdvantage from '@/components/polymathground/PolymathAdvantage'
+import PolymathGroundCTA from '@/components/polymathground/PolymathGroundCTA'
+import PolymathGroundHero from '@/components/polymathground/PolymathGroundHero'
+import PolymathOutcomes from '@/components/polymathground/PolymathOutcomes'
+import { SiteShell } from '@/components/site-shell'
 import { pageContent } from '@/lib/page-content'
 
 const content = pageContent['services/polymathground-startups']
@@ -9,5 +14,12 @@ export const metadata = {
 }
 
 export default function PolymathGroundStartupsPage() {
-  return <ContentPage eyebrow="SERVICES · POLYMATHGROUND STARTUPS" {...content} />
+  return (
+    <SiteShell>
+      <PolymathGroundHero />
+      <PolymathAdvantage />
+      <PolymathOutcomes />
+      <PolymathGroundCTA />
+    </SiteShell>
+  )
 }
