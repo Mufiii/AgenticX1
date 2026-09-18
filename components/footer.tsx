@@ -111,15 +111,15 @@ export function Footer() {
   }
 
   return (
-    <footer className="relative z-[1] w-full bg-black text-white">
+    <footer className="relative z-[1] w-full bg-black text-white border-t border-white/10">
       <div className="mx-auto max-w-[1280px] px-6 py-16 sm:px-8 lg:px-10 lg:py-20">
         <div className="flex items-center justify-between gap-6">
           <Link href="/" className="inline-flex items-center" aria-label="AgenticX">
             <Image
               src="/agenticX.png"
               alt="AgenticX"
-              width={1800}
-              height={600}
+              width={2000}
+              height={800}
               className="h-8 w-auto max-w-[180px] sm:h-9"
             />
           </Link>

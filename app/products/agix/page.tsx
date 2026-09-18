@@ -1,4 +1,6 @@
-import { ProductLanding } from '@/components/products/product-landing'
+import AGIxCapabilities from '@/components/products/agix/AGIxCapabilities'
+import AGIxHero from '@/components/products/agix/AGIxHero'
+import AGIxHowItWorks from '@/components/products/agix/AGIxHowItWorks'
 import { SiteShell } from '@/components/site-shell'
 
 export const metadata = {
@@ -10,14 +12,9 @@ export const metadata = {
 export default function AgixPage() {
   return (
     <SiteShell>
-      <ProductLanding
-        eyebrow="PRODUCTS · AGIX"
-        title="AGIx"
-        intro="Connect learners, founders, institutions, solution providers and opportunities through shared infrastructure for the agentic era."
-        imageSrc="/agix.png"
-        imageAlt="AGIx modular purple hardware with exploded chassis and compute board"
-        items={['PolymathGround', 'QaQ Passport', 'Agentic ARMY', 'Marketplace', 'Shared infrastructure']}
-      />
+      <AGIxHero />
+      <AGIxHowItWorks />
+      <AGIxCapabilities />
     </SiteShell>
   )
 }

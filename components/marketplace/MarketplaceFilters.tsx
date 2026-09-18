@@ -117,10 +117,10 @@ export function MarketplaceFilters({
         id={panelId}
         className={cn(
           'grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none lg:grid-rows-[1fr] lg:opacity-100',
-          open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0 lg:opacity-100',
+          open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0 max-lg:pointer-events-none lg:opacity-100',
         )}
       >
-        <div className="overflow-hidden">
+        <div className="overflow-hidden lg:overflow-visible">
           <div className="flex flex-col gap-6 pt-6">
             <div role="group" aria-label="Filter by category">
               <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">

@@ -20,7 +20,7 @@ export function TrustModel() {
           {trustColumns.map((column) => (
             <article key={column.id} data-campus-reveal className="min-w-0">
               <p className="text-[11px] font-medium tracking-[0.18em] text-[#9B86FF]/70">{column.id}</p>
-              <h3 className="mt-4 text-[20px] font-medium tracking-[-0.03em] text-white sm:text-[22px]">
+              <h3 className="mt-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-white">
                 {column.title}
               </h3>
               <p className="mt-3 max-w-[34ch] text-[14px] leading-[1.7] text-white/50 sm:text-[15px]">

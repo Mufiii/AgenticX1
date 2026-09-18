@@ -5,9 +5,9 @@ export function MarketplaceProcess() {
   return (
     <section className="relative overflow-hidden bg-[#050711] text-white">
       <div className="relative mx-auto max-w-[1440px] px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
-        <div className="max-w-[760px]" data-campus-reveal>
+        <div data-campus-reveal>
           <MarketplaceEyebrow>How it works</MarketplaceEyebrow>
-          <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-medium leading-[1.06] tracking-[-0.045em]">
+          <h2 className="max-w-[900px] text-[clamp(1.7rem,3.2vw,2.7rem)] font-medium leading-[1.12] tracking-[-0.04em]">
             Discover → Evaluate → Connect → Deploy
           </h2>
         </div>
@@ -16,7 +16,6 @@ export function MarketplaceProcess() {
           {processSteps.map((step, index) => (
             <li
               key={step.id}
-              data-campus-reveal
               className="relative border-t border-white/[0.08] py-8 md:border-t-0 md:border-l md:px-6 md:py-0 md:first:border-l-0 md:first:pl-0"
             >
               {index < processSteps.length - 1 ? (

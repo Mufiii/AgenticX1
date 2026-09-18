@@ -3,11 +3,13 @@ import { marketplacePrimaryClass, marketplaceSecondaryClass } from '@/components
 
 export function MarketplaceCTA() {
   return (
-    <section className="relative overflow-hidden border-t border-white/[0.08] bg-[#050711] text-white">
+    <section className="relative border-t border-white/[0.08] bg-[#050711] text-white">
       <div className="relative mx-auto max-w-[1440px] px-6 py-16 text-center sm:px-10 sm:py-20 lg:px-16 lg:py-24">
-        <div className="mx-auto max-w-[680px]" data-campus-reveal>
-          <h2 className="text-[clamp(1.9rem,3.8vw,3.1rem)] font-medium leading-[1.08] tracking-[-0.04em]">
-            Find the Intelligence You Need.
+        <div className="mx-auto max-w-[720px]" data-campus-reveal>
+          <h2 className="text-[clamp(1.75rem,3.2vw,2.6rem)] font-medium leading-[1.12] tracking-[-0.04em]">
+            Find the Intelligence
+            <br />
+            You Need.
           </h2>
           <p className="mx-auto mt-5 max-w-[540px] text-[15px] leading-[1.7] text-white/55 sm:text-[16px]">
             Explore AI agents, experts, learning and emerging technology built for the next generation of
