@@ -10,14 +10,14 @@ const audiences = [
 
 export function HeroSection() {
   return (
-    <section className="relative isolate flex min-h-dvh w-full items-center overflow-hidden text-white">
+    <section className="relative isolate flex h-dvh max-h-dvh w-full items-center overflow-hidden bg-[#020205] text-white">
       <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020205] via-[#020208]/88 to-transparent" />
-        <div className="absolute right-[-12%] top-[-18%] h-[78%] w-[70%] rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.18),rgba(37,99,235,0.06)_42%,transparent_70%)]" />
-        <div className="absolute bottom-[-30%] left-[18%] h-[50%] w-[70%] rounded-full bg-[radial-gradient(ellipse_at_top,rgba(30,64,175,0.12),transparent_62%)]" />
+        <div className="absolute inset-0 bg-[#020205]" />
+        <div className="absolute right-[-8%] top-[-12%] h-[62%] w-[58%] rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.16),transparent_68%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-[22%] bg-gradient-to-b from-transparent to-[#020205]" />
       </div>
 
-      <div className="relative z-10 mx-auto grid w-full  max-w-[1440px] grid-cols-1 items-center gap-10 px-5 pb-12 pt-32 sm:px-6 sm:pb-14 sm:pt-36 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10 lg:pb-20 lg:pt-36 xl:gap-16 xl:px-12">
+      <div className="relative z-10 mx-auto grid h-full min-h-0 w-full max-w-[1440px] grid-cols-1 items-center gap-6 px-5 pb-6 pt-24 sm:px-6 sm:pt-28 md:px-8 lg:grid-cols-2 lg:gap-10 lg:px-10 lg:pb-8 lg:pt-[104px] xl:gap-12 xl:px-12">
         <div className="relative z-10 max-w-[34rem] space-y-2 motion-safe:animate-[hero-fade-up_0.8s_cubic-bezier(0.22,1,0.36,1)_both] motion-reduce:animate-none lg:max-w-none">
           <span className="inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-[#8B5CF6] sm:text-[11px]">
             AI • WELLNESS • DEEPTECH
@@ -64,7 +64,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative z-[1] flex min-w-0 items-center justify-center motion-safe:animate-[hero-fade-up_0.9s_0.08s_cubic-bezier(0.22,1,0.36,1)_both] motion-reduce:animate-none lg:justify-end lg:-mr-4 xl:-mr-8">
+        <div className="relative z-[1] flex h-full min-h-0 min-w-0 items-center justify-center motion-safe:animate-[hero-fade-up_0.9s_0.08s_cubic-bezier(0.22,1,0.36,1)_both] motion-reduce:animate-none lg:justify-end lg:-mr-4 xl:-mr-8">
           <div className="hero-orbit-field hidden md:block" aria-hidden="true">
             <div className="hero-orbit-field__radial" />
             <div className="hero-orbit-field__product-glow" />
@@ -87,14 +87,14 @@ export function HeroSection() {
             aria-hidden="true"
           />
 
-          <div className="relative h-[min(38vh,320px)] w-full max-w-[300px] motion-safe:animate-[hero-float_5s_ease-in-out_infinite] motion-reduce:animate-none sm:h-[min(42vh,420px)] sm:max-w-[380px] md:h-[min(68vh,640px)] md:max-w-[560px] lg:h-[min(78vh,780px)] lg:max-w-[720px] lg:translate-x-2 xl:translate-x-4">
+          <div className="relative h-[min(30dvh,240px)] w-full max-w-[260px] motion-safe:animate-[hero-float_5s_ease-in-out_infinite] motion-reduce:animate-none sm:h-[min(32dvh,280px)] sm:max-w-[320px] md:h-[min(58dvh,520px)] md:max-w-[500px] lg:h-[min(64dvh,calc(100dvh-10.5rem))] lg:max-w-[640px] lg:translate-x-2 xl:translate-x-4">
             <Image
               src="/agix.png"
               alt="AGIX modular purple hardware with exploded chassis, AGIX processor, and compute board"
               width={1151}
-              height={1367}
+              height={1267}
               priority
-              sizes="(max-width: 639px) 78vw, (max-width: 1023px) 50vw, (max-width: 1440px) 46vw, 640px"
+              sizes="(max-width: 639px) 78vw, (max-width: 1023px) 50vw, (max-width: 1440px) 46vw, 540px"
               className="relative z-10 h-full w-full object-contain"
             />
           </div>

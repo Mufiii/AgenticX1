@@ -73,9 +73,6 @@ export function ContactPage() {
                         aria-hidden="true"
                       />
                       <div className="min-w-0">
-                        <p className="text-[11px] font-medium tracking-[0.18em] text-[#9B86FF]/70">
-                          {point.number}
-                        </p>
                         <h2 className="mt-1.5 text-[16px] font-medium tracking-[-0.02em] text-white">
                           {point.title}
                         </h2>

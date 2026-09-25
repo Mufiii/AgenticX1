@@ -71,18 +71,22 @@ export function JourneySection() {
       <div className="journey-timeline">
         {journeyMilestones.map((milestone) => (
           <article className="journey-milestone" key={milestone.year}>
-            <div className="milestone-meta">
-              <strong>{milestone.year}</strong>
-              <span>{milestone.phase}</span>
+            <div className="milestone-top">
+              <div className="milestone-meta">
+                <strong>{milestone.year}</strong>
+                <span>{milestone.phase}</span>
+              </div>
+              <div className="milestone-node" style={{ '--node-color': milestone.color } as React.CSSProperties} />
+              <RoadmapOrb year={milestone.year} color={milestone.color} variant={milestone.variant} />
+              <h3 className="text-xl font-semibold">{milestone.title}</h3>
+              <span className="milestone-subtitle text-lg font-semibold">{milestone.subtitle}</span>
             </div>
-            <div className="milestone-node" style={{ '--node-color': milestone.color } as React.CSSProperties} />
-            <RoadmapOrb year={milestone.year} color={milestone.color} variant={milestone.variant} />
-            <h3 className="text-xl font-semibold">{milestone.title}</h3>
-            <span className="milestone-subtitle text-lg font-semibold">{milestone.subtitle}</span>
-            <p>{milestone.description}</p>
-            <Link href={milestone.href} className="journey-learn-more">
-              Learn More <ArrowUpRight size={15} aria-hidden="true" />
-            </Link> 
+            <div className="milestone-body">
+              <p>{milestone.description}</p>
+              <Link href={milestone.href} className="journey-learn-more">
+                Learn More <ArrowUpRight size={15} aria-hidden="true" />
+              </Link>
+            </div>
           </article>
         ))}
       </div>

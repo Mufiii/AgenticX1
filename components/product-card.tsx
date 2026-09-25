@@ -28,11 +28,21 @@ export function ProductCard({ product }: { product: Product }) {
           <span>{product.eyebrow}</span>
         </p>
         <h3 className={product.nameJoin === 'break' ? 'product-card-title--stacked' : undefined}>
-          <ProductTitle
-            nameLead={product.nameLead}
-            nameAccent={product.nameAccent}
-            nameJoin={product.nameJoin}
-          />
+          {product.logoSrc ? (
+            <Image
+              src={product.logoSrc}
+              alt={`${product.nameLead}${product.nameAccent}`}
+              width={2039}
+              height={459}
+              className="product-card-logo"
+            />
+          ) : (
+            <ProductTitle
+              nameLead={product.nameLead}
+              nameAccent={product.nameAccent}
+              nameJoin={product.nameJoin}
+            />
+          )}
         </h3>
         <p className="product-card-tagline">{product.tagline}</p>
         <p className="product-card-description">{product.description}</p>

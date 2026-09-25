@@ -118,8 +118,8 @@ export function Footer() {
             <Image
               src="/agenticX.png"
               alt="AgenticX"
-              width={2000}
-              height={800}
+              width={1215}
+              height={237}
               className="h-8 w-auto max-w-[180px] sm:h-9"
             />
           </Link>

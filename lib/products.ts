@@ -11,6 +11,7 @@ export type Product = {
   ctaLabel: string
   imageSrc: string | null
   imageAlt: string
+  logoSrc?: string
 }
 
 export const products: Product[] = [
@@ -20,8 +21,8 @@ export const products: Product[] = [
     nameLead: 'Polymath',
     nameAccent: 'Ground',
     eyebrow: 'LEARN × CONNECT × INNOVATE',
-    tagline: 'BUILD MULTIDISCIPLINARY MINDS\nFOR THE AI & DEEPTECH ERA.',
-    description: 'Learn across disciplines, connect ideas and\nturn knowledge into innovation.',
+    tagline: 'POLYMATHGROUND expans how you think',
+    description: 'A short knowladge and startup ecosystem connecting technolgy, psychology, business, science, design, economics and ethics',
     href: '/polymathground',
     ctaLabel: 'Explore PolymathGround',
     imageSrc: '/images/polymath.png',
@@ -34,7 +35,7 @@ export const products: Product[] = [
     nameAccent: 'Passport',
     nameJoin: 'space',
     eyebrow: 'LEARN × VERIFY × SHOWCASE × PROGRESS',
-    tagline: 'YOUR SKILLS. YOUR PROOF.\nYOUR NEXT OPPORTUNITY.',
+    tagline: 'QaQ passport proves you what you can do',
     description:
       'A learner-controlled digital record of certified skills,\nprojects and achievements for the AI & DeepTech era.',
     href: '/services/qaq-passport',
@@ -49,7 +50,7 @@ export const products: Product[] = [
     nameAccent: 'Transformation Agent',
     nameJoin: 'break',
     eyebrow: 'COACH × REFLECT × ADAPT × TRANSFORM',
-    tagline: 'A PERSONAL AI COMPANION\nFOR A BETTER YOU.',
+    tagline: 'A personal AI companion for a better you.',
     description:
       'Gain clarity, build better habits, and unlock your\nfull potential with personalized AI guidance.',
     href: '/services/personalized-agents',
@@ -62,13 +63,14 @@ export const products: Product[] = [
     index: '04',
     nameLead: 'AGI',
     nameAccent: 'x',
+    logoSrc: '/images/agix-logo.png',
     eyebrow: 'ORCHESTRATE × EXECUTE × SCALE × IMPACT',
-    tagline: 'THE AGENTIC OPERATING SYSTEM\nFOR INTELLIGENT WORK.',
+    tagline: 'AGIx give you the gateway',
     description:
-      'One intelligent layer connecting your agents, knowledge, tools and workflows —\nbuilt to reason, execute and scale.',
-    href: '/products/agix',
+      'The gateway to knowladge, specialist agents, connected systems, verified identity and future digital twin capabilities.',
+    href: '/products/agix-mobile',
     ctaLabel: 'Explore AGIx',
-    imageSrc: '/agix.png',
+    imageSrc: '/images/agix-mobile.png',
     imageAlt: 'AGIx agentic operating system',
   },
 ]

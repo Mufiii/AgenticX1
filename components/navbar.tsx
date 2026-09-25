@@ -113,11 +113,11 @@ export function Navbar() {
   }, [])
 
   return (
-    <header className={`site-nav${scrolled ? ' is-scrolled' : ''}${open ? ' is-open' : ''}`}>
+    <header className={`site-nav${scrolled ? ' is-scrolled' : ''}${open ? ' is-open' : ''}${scrolled || open ? ' backdrop-blur-xl' : ''}`}>
       <div className="nav-inner">
         <div className="nav-left">
           <Link href="/" className="brand" aria-label="AgenticX" onClick={() => setOpen(false)}>
-            <Image src="/agenticX.png" alt="AgenticX" width={186} height={36} priority className="brand-logo" />
+            <Image src="/agenticX.png" alt="AgenticX" width={1215} height={237} priority className="brand-logo" />
           </Link>
         </div>
 
