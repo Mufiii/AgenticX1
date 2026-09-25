@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { nav } from '@/components/nav/data'
 import { Dropdown } from '@/components/nav/Dropdown'
 import { isNavDropdown, type NavDropdown, type NavItem } from '@/components/nav/types'
@@ -155,7 +155,8 @@ export function Navbar() {
         <div className="nav-right">
           <div className="nav-actions">
             <Link href="/contact" className="nav-cta-primary">
-              Build your Future
+              Be a Member
+              <ArrowUpRight size={16} className="ml-2" aria-hidden="true" />
             </Link>
           </div>
           <button className="menu-button" aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => setOpen(!open)}>
@@ -191,6 +192,7 @@ export function Navbar() {
           <div className="mobile-actions">
             <Link href="/contact" className="nav-cta-primary mobile-cta" onClick={() => setOpen(false)}>
               Build your Future
+              <ArrowUpRight size={16} className="ml-2" aria-hidden="true" />
             </Link>
           </div>
         </div>

@@ -18,7 +18,7 @@ const journeyMilestones: Array<{
     phase: 'TODAY',
     title: 'Agentic Brain',
     subtitle: 'PERSONALIZED INTELLIGENCE THAT ACTS.',
-    description: 'AI that understands your context, goals and workflows — then reasons, plans and acts alongside you.',
+    description: 'A framework for intelligent adaptation, combining perception, reasoning, action, learning, and orchestration to create AI that understands, decides, acts, and improves.',
     color: '#6D35F5',
     variant: 'agentic',
     href: '/products/agentic-brain',
@@ -29,7 +29,7 @@ const journeyMilestones: Array<{
     title: 'AI Digital Twin',
     subtitle: 'INTELLIGENCE THAT MIRRORS YOU.',
     description:
-      'A persistent digital counterpart capable of representing your knowledge, preferences, capabilities and decision patterns across contexts.',
+      'A digital representation that learns your knowledge, preferences, decisions, and patterns to create an intelligent counterpart that understands, predicts, and assists.',
     color: '#6D35F5',
     variant: 'digital-twin',
     href: '/products/ai-digital-twin',
@@ -40,7 +40,7 @@ const journeyMilestones: Array<{
     title: 'Photonic Brain',
     subtitle: 'INTELLIGENCE AT THE SPEED OF LIGHT.',
     description:
-      'Exploring photonic computing as a pathway toward radically faster, more energy-efficient intelligence and new computational architectures.',
+      'A new approach to computing that uses light to process information faster, enabling powerful intelligence for the next generation of AI.',
     color: '#6D35F5',
     variant: 'photonic',
     href: '/products/photonic-brain',
@@ -77,12 +77,12 @@ export function JourneySection() {
             </div>
             <div className="milestone-node" style={{ '--node-color': milestone.color } as React.CSSProperties} />
             <RoadmapOrb year={milestone.year} color={milestone.color} variant={milestone.variant} />
-            <h3>{milestone.title}</h3>
-            <span className="milestone-subtitle">{milestone.subtitle}</span>
+            <h3 className="text-xl font-semibold">{milestone.title}</h3>
+            <span className="milestone-subtitle text-lg font-semibold">{milestone.subtitle}</span>
             <p>{milestone.description}</p>
             <Link href={milestone.href} className="journey-learn-more">
               Learn More <ArrowUpRight size={15} aria-hidden="true" />
-            </Link>
+            </Link> 
           </article>
         ))}
       </div>

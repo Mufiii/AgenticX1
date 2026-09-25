@@ -60,15 +60,15 @@ export const products: Product[] = [
   {
     id: 'agix',
     index: '04',
-    nameLead: 'Agi',
+    nameLead: 'AGI',
     nameAccent: 'x',
     eyebrow: 'ORCHESTRATE × EXECUTE × SCALE × IMPACT',
     tagline: 'THE AGENTIC OPERATING SYSTEM\nFOR INTELLIGENT WORK.',
     description:
       'One intelligent layer connecting your agents, knowledge, tools and workflows —\nbuilt to reason, execute and scale.',
     href: '/products/agix',
-    ctaLabel: 'Explore Agix',
+    ctaLabel: 'Explore AGIx',
     imageSrc: '/agix.png',
-    imageAlt: 'Agix agentic operating system',
+    imageAlt: 'AGIx agentic operating system',
   },
 ]

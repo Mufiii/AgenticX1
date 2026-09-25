@@ -3,9 +3,9 @@ import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 
 const audiences = [
-  { title: 'Campus', subtitle: 'Students' },
-  { title: 'Corporate', subtitle: 'Employees' },
-  { title: 'Community', subtitle: 'Entrepreneurs' },
+  { title: 'Campus', subtitle: 'Students', href: '/solutions/campus' },
+  { title: 'Corporate', subtitle: 'Employees', href: '/solutions/corporate' },
+  { title: 'Community', subtitle: 'Entrepreneurs', href: '/solutions/community' },
 ] as const
 
 export function HeroSection() {
@@ -19,12 +19,12 @@ export function HeroSection() {
 
       <div className="relative z-10 mx-auto grid w-full  max-w-[1440px] grid-cols-1 items-center gap-10 px-5 pb-12 pt-32 sm:px-6 sm:pb-14 sm:pt-36 md:gap-12 md:px-8 lg:grid-cols-2 lg:gap-14 lg:px-10 lg:pb-20 lg:pt-36 xl:gap-16 xl:px-12">
         <div className="relative z-10 max-w-[34rem] space-y-2 motion-safe:animate-[hero-fade-up_0.8s_cubic-bezier(0.22,1,0.36,1)_both] motion-reduce:animate-none lg:max-w-none">
-          <span className="inline-block text-[10px] font-semibold uppercase tracking-[0.25em] text-[#8B5CF6] sm:text-[11px]">
+          <span className="inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-[#8B5CF6] sm:text-[11px]">
             AI • WELLNESS • DEEPTECH
           </span>
 
           <p className="mt-5 max-w-[500px] text-base leading-relaxed text-[#A1A1AA] sm:text-lg">
-            Human-centred transformation for the Agentic and AGI era
+            Human-centred transformation for the Agentic AI and AGI era
           </p>
 
           <h1 className="mt-6 flex flex-col font-medium leading-[0.98] tracking-[-0.035em] text-white text-[clamp(2.75rem,6vw,5.5rem)] sm:mt-7">
@@ -32,16 +32,20 @@ export function HeroSection() {
             <em className="block italic font-medium text-[#8B5CF6]">Agentic AI Brain</em>
           </h1>
 
-          <div className="mt-8 flex flex-wrap items-start gap-y-4 sm:mt-10">
-            <span className="mr-5 pt-0.5 text-[13px] font-medium text-[#A1A1AA] sm:mr-8">for</span>
+          <div className="mt-8 flex max-w-4xl flex-wrap items-start gap-y-4 sm:mt-10">
             {audiences.map((item, index) => (
               <div
                 key={item.title}
                 className={`flex flex-col gap-1 ${index > 0 ? 'ml-5 border-l border-white/10 pl-5 sm:ml-8 sm:pl-8' : ''}`}
               >
-                <span className="text-[24px] font-medium leading-tight text-white">
-                  {item.title}
-                </span>
+                <div className="flex items-center gap-2">
+                  <Link
+                    href={item.href}
+                    className="text-[24px] font-medium leading-tight text-white !underline decoration-white/600 underline-offset-[4px] transition-colors duration-200 hover:text-[#8B5CF6] hover:decoration-[#8B5CF6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6]"
+                    >
+                    {item.title}
+                  </Link>
+                </div>
                 <span className="text-[18px] font-normal leading-tight text-[#71717A]">
                   {item.subtitle}
                 </span>
@@ -52,9 +56,9 @@ export function HeroSection() {
           <div className="mt-8 sm:mt-10">
             <Link
               href="/company/contact"
-              className="inline-flex h-[54px] items-center justify-center gap-2 rounded-full bg-[#7C3AED] px-8 text-[13px] font-semibold !text-white shadow-[0_10px_28px_rgba(124,58,237,0.28)] transition-[transform,background-color,box-shadow] duration-300 ease-out hover:-translate-y-px hover:bg-[#8B5CF6] hover:shadow-[0_14px_34px_rgba(139,92,246,0.36)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              className="inline-flex h-[54px] items-center justify-center gap-2 rounded-full bg-[#7C3AED] px-8 text-[16px] font-semibold !text-white shadow-[0_10px_28px_rgba(124,58,237,0.28)] transition-[transform,background-color,box-shadow] duration-300 ease-out hover:-translate-y-px hover:bg-[#8B5CF6] hover:shadow-[0_14px_34px_rgba(139,92,246,0.36)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
             >
-              Secure Your Place in the AI Economy
+              Be a Member
               <ArrowUpRight size={16} aria-hidden="true" />
             </Link>
           </div>
