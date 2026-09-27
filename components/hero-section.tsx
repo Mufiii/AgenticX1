@@ -1,6 +1,12 @@
 import Image from 'next/image'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Play } from 'lucide-react'
 import Link from 'next/link'
+
+const taglines = [
+  'Human-centred transformation for the Agentic AI and AGI era',
+  'Human-AI Adaptability Intelligence',
+  'Intelligence as a Service',
+] as const
 
 const audiences = [
   { title: 'Campus', subtitle: 'Students', href: '/solutions/campus' },
@@ -11,6 +17,7 @@ const audiences = [
 export function HeroSection() {
   return (
     <section className="relative isolate flex h-dvh max-h-dvh w-full items-center overflow-hidden bg-[#020205] text-white">
+      
       <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
         <div className="absolute inset-0 bg-[#020205]" />
         <div className="absolute right-[-8%] top-[-12%] h-[62%] w-[58%] rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.16),transparent_68%)]" />
@@ -23,9 +30,13 @@ export function HeroSection() {
             AI • WELLNESS • DEEPTECH
           </span>
 
-          <p className="mt-5 max-w-[500px] text-base leading-relaxed text-[#A1A1AA] sm:text-lg">
-            Human-centred transformation for the Agentic AI and AGI era
-          </p>
+          <div className="hero-tagline mt-2 max-w-[500px] text-base leading-relaxed text-[#A1A1AA] sm:text-lg">
+            {taglines.map((line, index) => (
+              <p key={line} className="hero-tagline__line" style={{ animationDelay: `${index * 3}s` }}>
+                {line}
+              </p>
+            ))}
+          </div>
 
           <h1 className="mt-6 flex flex-col font-medium leading-[0.98] tracking-[-0.035em] text-white text-[clamp(2.75rem,6vw,5.5rem)] sm:mt-7">
             <span className="block">Personalized</span>
@@ -38,14 +49,17 @@ export function HeroSection() {
                 key={item.title}
                 className={`flex flex-col gap-1 ${index > 0 ? 'ml-5 border-l border-white/10 pl-5 sm:ml-8 sm:pl-8' : ''}`}
               >
-                <div className="flex items-center gap-2">
-                  <Link
-                    href={item.href}
-                    className="text-[24px] font-medium leading-tight text-white !underline decoration-white/600 underline-offset-[4px] transition-colors duration-200 hover:text-[#8B5CF6] hover:decoration-[#8B5CF6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6]"
-                    >
-                    {item.title}
-                  </Link>
-                </div>
+                <Link
+                  href={item.href}
+                  className="group inline-flex items-center gap-1 text-[24px] font-medium leading-tight text-white no-underline transition-colors duration-200 hover:text-[#8B5CF6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8B5CF6]"
+                >
+                  {item.title}
+                  <ArrowUpRight
+                    size={15}
+                    aria-hidden="true"
+                    className="shrink-0 text-[#A78BFA] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#8B5CF6] motion-reduce:transition-none"
+                  />
+                </Link>
                 <span className="text-[18px] font-normal leading-tight text-[#71717A]">
                   {item.subtitle}
                 </span>
@@ -53,13 +67,29 @@ export function HeroSection() {
             ))}
           </div>
 
-          <div className="mt-8 sm:mt-10">
+          <div className="mt-8 flex flex-row flex-nowrap items-center gap-2 sm:mt-10 sm:gap-3">
             <Link
-              href="/company/contact"
-              className="inline-flex h-[54px] items-center justify-center gap-2 rounded-full bg-[#7C3AED] px-8 text-[16px] font-semibold !text-white shadow-[0_10px_28px_rgba(124,58,237,0.28)] transition-[transform,background-color,box-shadow] duration-300 ease-out hover:-translate-y-px hover:bg-[#8B5CF6] hover:shadow-[0_14px_34px_rgba(139,92,246,0.36)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              href="/contact"
+              className="inline-flex h-12 items-center gap-2.5 whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#A78BFA_0%,#7C3AED_48%,#6D28D9_100%)] py-1 pl-5 pr-1 text-[14px] font-semibold !text-white shadow-[0_10px_28px_rgba(124,58,237,0.42)] transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_14px_36px_rgba(139,92,246,0.55)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C4B5FD] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:h-[54px] sm:gap-3 sm:pl-6 sm:pr-1.5 sm:text-[15px]"
             >
               Be a Member
-              <ArrowUpRight size={16} aria-hidden="true" />
+              <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-white text-[#6D28D9] sm:size-9">
+                <ArrowUpRight size={16} aria-hidden="true" strokeWidth={2.25} />
+              </span>
+            </Link>
+            <Link
+              href="/company/contact"
+              className="group inline-flex h-12 items-center gap-2.5 whitespace-nowrap rounded-full border border-[#A78BFA]/45 bg-white/[0.04] py-1 pl-1 pr-4 text-[14px] font-semibold !text-white shadow-[0_0_22px_rgba(124,58,237,0.22)] backdrop-blur-md transition-[transform,box-shadow,border-color,background-color] duration-300 ease-out hover:-translate-y-0.5 hover:border-[#C4B5FD]/75 hover:bg-white/[0.07] hover:shadow-[0_8px_32px_rgba(139,92,246,0.32)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C4B5FD] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:h-[54px] sm:gap-3 sm:pl-1.5 sm:pr-5 sm:text-[15px]"
+            >
+              <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-black/50 text-[#C4B5FD] ring-1 ring-[#A78BFA]/35 sm:size-9">
+                <Play size={12} aria-hidden="true" className="translate-x-px fill-current" />
+              </span>
+              Explore AGIX
+              <ArrowRight
+                size={16}
+                aria-hidden="true"
+                className="text-[#C4B5FD] transition-transform duration-300 ease-out group-hover:translate-x-0.5 motion-reduce:transition-none"
+              />
             </Link>
           </div>
         </div>

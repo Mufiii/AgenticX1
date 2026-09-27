@@ -105,7 +105,7 @@ export default function CampusHero() {
               sm:tracking-[0.25em]
             "
           >
-            Corporate AI • Workforce Intelligence
+            Campus AI • Workforce Intelligence
           </p>
 
           <span className="h-px w-8 bg-[#635BFF]" />
@@ -123,6 +123,7 @@ export default function CampusHero() {
             leading-[0.98]
             tracking-[-0.035em]
             text-white
+            mb-4
           "
         >
           From AI Learner
@@ -143,8 +144,8 @@ export default function CampusHero() {
 
         <p
           className="
-            mt-9
-            max-w-[680px]
+            mt-12
+            max-w-[780px]
             text-[16px]
             font-normal
             leading-[1.7]

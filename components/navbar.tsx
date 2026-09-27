@@ -117,7 +117,21 @@ export function Navbar() {
       <div className="nav-inner">
         <div className="nav-left">
           <Link href="/" className="brand" aria-label="AgenticX" onClick={() => setOpen(false)}>
-            <Image src="/agenticX.png" alt="AgenticX" width={1215} height={237} priority className="brand-logo" />
+            <Image
+              src="/agenticx-full-logo.png"
+              alt="AgenticX"
+              width={2006}
+              height={341}
+              priority
+              style={{
+                display: 'block',
+                width: 'min(280px, max(220px, 36vw), calc(100vw - 96px))',
+                height: 'auto',
+                aspectRatio: '2006 / 341',
+                objectFit: 'cover',
+                objectPosition: '50% 46%',
+              }}
+            />
           </Link>
         </div>
 
@@ -154,9 +168,14 @@ export function Navbar() {
 
         <div className="nav-right">
           <div className="nav-actions">
-            <Link href="/contact" className="nav-cta-primary">
+          <Link
+              href="/contact"
+              className="inline-flex h-8 items-center gap-2 whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#A78BFA_0%,#7C3AED_48%,#6D28D9_100%)] py-1 pl-5 pr-1 text-[12px] font-semibold !text-white shadow-[0_10px_28px_rgba(124,58,237,0.42)] transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_14px_36px_rgba(139,92,246,0.55)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C4B5FD] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:h-[54px] sm:gap-3 sm:pl-6 sm:pr-1.5 sm:text-[15px]"
+            >
               Be a Member
-              <ArrowUpRight size={16} className="ml-2" aria-hidden="true" />
+              <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-white text-[#6D28D9] sm:size-9">
+                <ArrowUpRight size={14} aria-hidden="true" strokeWidth={2.25} />
+              </span>
             </Link>
           </div>
           <button className="menu-button" aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => setOpen(!open)}>
@@ -190,9 +209,14 @@ export function Navbar() {
             ),
           )}
           <div className="mobile-actions">
-            <Link href="/contact" className="nav-cta-primary mobile-cta" onClick={() => setOpen(false)}>
-              Build your Future
-              <ArrowUpRight size={16} className="ml-2" aria-hidden="true" />
+          <Link
+              href="/contact"
+              className="inline-flex h-12 items-center gap-2.5 whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#A78BFA_0%,#7C3AED_48%,#6D28D9_100%)] py-1 pl-5 pr-1 text-[14px] font-semibold !text-white shadow-[0_10px_28px_rgba(124,58,237,0.42)] transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_14px_36px_rgba(139,92,246,0.55)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C4B5FD] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:h-[54px] sm:gap-3 sm:pl-6 sm:pr-1.5 sm:text-[15px]"
+            >
+              Be a Member
+              <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-white text-[#6D28D9] sm:size-9">
+                <ArrowUpRight size={16} aria-hidden="true" strokeWidth={2.25} />
+              </span>
             </Link>
           </div>
         </div>

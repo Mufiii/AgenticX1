@@ -61,27 +61,21 @@ export function CampusPathway() {
 
         {/* ───────── Header ───────── */}
         <div
-          className="mx-auto max-w-[720px] text-center"
+          className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center sm:gap-8"
           data-campus-reveal
         >
-          <div className="mb-6 flex items-center justify-center gap-3">
-            <span className="h-px w-8 bg-[#7C5CFF]" />
+          <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-[#9B7BFF]">
+            The Pathway
+          </span>
 
-            <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-[#9B7BFF]">
-              The Pathway
-            </span>
-
-            <span className="h-px w-8 bg-[#7C5CFF]" />
-          </div>
-
-          <h2 className="text-[clamp(2.7rem,5.5vw,5rem)] font-medium leading-[0.98] tracking-[-0.035em]">
+          <h2 className="text-[clamp(2.7rem,5.5vw,5rem)] font-medium leading-[1.08] tracking-[-0.035em]">
             From Learning to{' '}
             <span className="bg-gradient-to-r from-[#A78BFA] via-[#8B5CF6] to-[#6D35F5] bg-clip-text text-transparent">
               Innovation
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-[540px] text-[15px] leading-[1.7] text-white/45 sm:text-[16px]">
+          <p className="max-w-[540px] text-[15px] leading-[1.7] text-white/45 sm:text-[16px]">
             Our campus pathway connects learning, experimentation and
             entrepreneurship into one continuous journey.
           </p>

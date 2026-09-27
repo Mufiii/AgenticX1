@@ -19,12 +19,22 @@ function ProductTitle({
 export function ProductCard({ product }: { product: Product }) {
   return (
     <article className={`product-card product-card--${product.id}`}>
+      <div className="product-card-media">
+        {product.imageSrc ? (
+          <Image
+            src={product.imageSrc}
+            alt={product.imageAlt}
+            width={1600}
+            height={1000}
+            sizes="(max-width: 800px) 100vw, (max-width: 1180px) 55vw, 620px"
+            className="product-card-image"
+          />
+        ) : (
+          <div className="product-card-placeholder" aria-hidden="true" />
+        )}
+      </div>
       <div className="product-card-copy">
         <p className="product-card-eyebrow">
-          <span className="product-card-index">{product.index}</span>
-          <span className="product-card-eyebrow-rule" aria-hidden="true">
-            |
-          </span>
           <span>{product.eyebrow}</span>
         </p>
         <h3 className={product.nameJoin === 'break' ? 'product-card-title--stacked' : undefined}>
@@ -50,20 +60,7 @@ export function ProductCard({ product }: { product: Product }) {
           {product.ctaLabel} <span aria-hidden="true">→</span>
         </Link>
       </div>
-      <div className="product-card-media">
-        {product.imageSrc ? (
-          <Image
-            src={product.imageSrc}
-            alt={product.imageAlt}
-            width={1600}
-            height={1000}
-            sizes="(max-width: 800px) 100vw, (max-width: 1180px) 55vw, 620px"
-            className="product-card-image"
-          />
-        ) : (
-          <div className="product-card-placeholder" aria-hidden="true" />
-        )}
-      </div>
+      
     </article>
   )
 }

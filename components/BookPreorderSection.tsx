@@ -163,6 +163,9 @@ export default function BookPreorderSection() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-white/40">
+              Early Edition · Limited Availability
+            </span>
             <button
               type="button"
               onClick={openModal}
@@ -176,9 +179,7 @@ export default function BookPreorderSection() {
               />
             </button>
 
-            <span className="text-[10px] uppercase tracking-[0.25em] text-white/40">
-              Early Edition · Limited Availability
-            </span>
+            
           </div>
         </div>
 
