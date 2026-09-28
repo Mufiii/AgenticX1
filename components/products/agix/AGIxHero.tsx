@@ -65,7 +65,7 @@ export default function AGIxHero() {
 
             {/* AGIx image */}
             <img
-              src="/agix.png"
+              src="/images/agix-mobile.png"
               alt="AGIx intelligent digital interface"
               className="relative z-10 h-auto w-full max-w-[620px] object-contain drop-shadow-[0_25px_80px_rgba(124,58,237,0.25)]"
             />

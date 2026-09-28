@@ -78,7 +78,7 @@ export function HeroSection() {
               </span>
             </Link>
             <Link
-              href="/company/contact"
+              href="/product/agix"
               className="group inline-flex h-12 items-center gap-2.5 whitespace-nowrap rounded-full border border-[#A78BFA]/45 bg-white/[0.04] py-1 pl-1 pr-4 text-[14px] font-semibold !text-white shadow-[0_0_22px_rgba(124,58,237,0.22)] backdrop-blur-md transition-[transform,box-shadow,border-color,background-color] duration-300 ease-out hover:-translate-y-0.5 hover:border-[#C4B5FD]/75 hover:bg-white/[0.07] hover:shadow-[0_8px_32px_rgba(139,92,246,0.32)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C4B5FD] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:h-[54px] sm:gap-3 sm:pl-1.5 sm:pr-5 sm:text-[15px]"
             >
               <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-black/50 text-[#C4B5FD] ring-1 ring-[#A78BFA]/35 sm:size-9">

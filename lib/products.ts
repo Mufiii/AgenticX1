@@ -65,7 +65,7 @@ export const products: Product[] = [
     nameAccent: 'x',
     logoSrc: '/images/agix-logo.png',
     eyebrow: 'ORCHESTRATE × EXECUTE × SCALE × IMPACT',
-    tagline: 'AGIx give you the gateway',
+    tagline: 'Experience the AGI',
     description:
       'The gateway to knowladge, specialist agents, connected systems, verified identity and future digital twin capabilities.',
     href: '/products/agix-mobile',
