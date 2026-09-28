@@ -68,7 +68,7 @@ export const products: Product[] = [
     tagline: 'Experience the AGI',
     description:
       'The gateway to knowladge, specialist agents, connected systems, verified identity and future digital twin capabilities.',
-    href: '/products/agix-mobile',
+    href: '/products/agix',
     ctaLabel: 'Explore AGIx',
     imageSrc: '/images/agix-mobile.png',
     imageAlt: 'AGIx agentic operating system',
