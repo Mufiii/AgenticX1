@@ -1,14 +1,11 @@
 import {
   BriefcaseBusiness,
-  Cpu,
   Fingerprint,
   GraduationCap,
   Lightbulb,
   Sparkles,
-  UserRound,
   Users,
   Workflow,
-  Zap,
 } from 'lucide-react'
 import type { NavItem } from '@/components/nav/types'
 
@@ -77,44 +74,6 @@ export const nav: NavItem[] = [
             href: '/services/qaq-passport',
             icon: Fingerprint,
             description: 'A portable record of skills, projects and proven capability.',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: 'Product',
-    href: '/product',
-    aliases: ['/products'],
-    layout: 'product',
-    columns: [
-      {
-        heading: 'Product',
-        appearance: 'icon',
-        links: [
-          {
-            label: 'Agentic Brain',
-            href: '/product/agentic-brain',
-            icon: Cpu,
-            description: 'The intelligence layer for autonomous business execution.',
-          },
-          {
-            label: 'AI Digital Twin',
-            href: '/product/ai-digital-twin',
-            icon: UserRound,
-            description: 'A continuously developing intelligence layer built around the individual.',
-          },
-          {
-            label: 'Photonic Brain',
-            href: '/product/photonic-brain',
-            icon: Zap,
-            description: 'A second brain for human longevity.',
-          },
-          {
-            label: 'AGIx',
-            href: '/product/agix',
-            icon: Sparkles,
-            description: 'The broader intelligence ecosystem connecting humans, agents and systems.',
           },
         ],
       },

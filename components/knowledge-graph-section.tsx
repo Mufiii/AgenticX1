@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
 import { SectionLabel } from '@/components/section-label'
 
 export function KnowledgeGraphSection() {
@@ -16,9 +14,6 @@ export function KnowledgeGraphSection() {
           Personal, academic, professional and organizational knowledge can be structured into a connected graph—so AI understands
           relationships, not simply documents.
         </p>
-        <Link href="/products/agentic-brain" className="text-link">
-          Explore the research <ArrowUpRight size={15} />
-        </Link>
       </div>
     </section>
   )

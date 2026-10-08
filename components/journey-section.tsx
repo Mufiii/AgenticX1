@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
 import { RoadmapOrb, type RoadmapVariant } from '@/components/roadmap-orb'
 import { SectionLabel } from '@/components/section-label'
 
@@ -11,7 +9,6 @@ const journeyMilestones: Array<{
   description: string
   color: string
   variant: RoadmapVariant
-  href: string
 }> = [
   {
     year: '2026',
@@ -21,7 +18,6 @@ const journeyMilestones: Array<{
     description: 'A framework for intelligent adaptation, combining perception, reasoning, action, learning, and orchestration to create AI that understands, decides, acts, and improves.',
     color: '#6D35F5',
     variant: 'agentic',
-    href: '/products/agentic-brain',
   },
   {
     year: '2030',
@@ -32,7 +28,6 @@ const journeyMilestones: Array<{
       'A digital representation that learns your knowledge, preferences, decisions, and patterns to create an intelligent counterpart that understands, predicts, and assists.',
     color: '#6D35F5',
     variant: 'digital-twin',
-    href: '/products/ai-digital-twin',
   },
   {
     year: '2033',
@@ -43,7 +38,6 @@ const journeyMilestones: Array<{
       'A new approach to computing that uses light to process information faster, enabling powerful intelligence for the next generation of AI.',
     color: '#6D35F5',
     variant: 'photonic',
-    href: '/products/photonic-brain',
   },
 ]
 
@@ -83,9 +77,6 @@ export function JourneySection() {
             </div>
             <div className="milestone-body">
               <p>{milestone.description}</p>
-              <Link href={milestone.href} className="journey-learn-more">
-                Learn More <ArrowUpRight size={15} aria-hidden="true" />
-              </Link>
             </div>
           </article>
         ))}

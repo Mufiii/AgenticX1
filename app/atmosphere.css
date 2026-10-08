@@ -195,103 +195,473 @@
   50% { transform: translate3d(12px, -18px, 0); opacity: 0.7; }
 }
 
-.hero-orbit-field {
+.hero-intel {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 100%;
+  overflow: clip;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 46%, rgba(18, 10, 36, 0.55), transparent 62%),
+    #030305;
+  color: #fff;
+}
+
+.hero-intel__field {
   position: absolute;
-  inset: -8% -8% 0;
+  inset: 0;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
 }
 
-.hero-orbit-field__radial {
+.hero-intel__wash {
   position: absolute;
-  left: 52%;
-  top: 46%;
-  width: 86%;
-  height: 86%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.16) 0%, rgba(37, 99, 235, 0.06) 38%, transparent 68%);
+  inset: 0;
+  background:
+    radial-gradient(ellipse 42% 36% at 18% 48%, rgba(76, 29, 149, 0.16), transparent 70%),
+    radial-gradient(ellipse 42% 36% at 82% 46%, rgba(67, 56, 202, 0.12), transparent 70%),
+    radial-gradient(ellipse 50% 28% at 50% 100%, rgba(109, 40, 217, 0.16), transparent 70%);
+  animation: hero-intel-fade 1.6s ease both;
 }
 
-.hero-orbit-field__product-glow {
+.hero-intel__trails {
   position: absolute;
-  left: 52%;
-  top: 48%;
-  width: 58%;
-  height: 58%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.22) 0%, rgba(91, 33, 182, 0.08) 42%, transparent 70%);
-  filter: blur(18px);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: hero-intel-fade 2s ease 0.2s forwards;
 }
 
-.hero-orbit-field__ring {
+.hero-intel__trail-glow {
+  opacity: 0.28;
+  animation: hero-intel-pulse 11s ease-in-out infinite;
+}
+
+.hero-intel__trail-line {
+  opacity: 0.85;
+}
+
+.hero-intel__satellite {
+  position: absolute;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 32%, rgba(196, 181, 253, 0.45), rgba(49, 28, 92, 0.35) 28%, rgba(6, 5, 12, 0.95) 64%);
+  box-shadow: 0 0 18px rgba(109, 40, 217, 0.18);
+}
+
+.hero-intel__satellite--left {
+  left: 7%;
+  top: 22%;
+  width: 26px;
+  height: 26px;
+}
+
+.hero-intel__satellite--right {
+  right: 9%;
+  top: 64%;
+  width: 16px;
+  height: 16px;
+  opacity: 0.85;
+}
+
+.hero-intel__core {
   position: absolute;
   left: 50%;
   top: 50%;
-  border: 1px solid rgba(196, 181, 253, 0.16);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+  width: min(920px, 86vw, 88vh);
+  aspect-ratio: 1;
+  height: auto;
+  transform: translate(-50%, -52%);
 }
 
-.hero-orbit-field__ring--core {
-  width: 68%;
-  height: 68%;
-  box-shadow: 0 0 40px rgba(124, 58, 237, 0.08) inset;
-  animation: hero-orbit-spin 90s linear infinite;
-}
-
-.hero-orbit-field__ring--a {
-  width: 84%;
-  height: 58%;
-  border-color: rgba(139, 92, 246, 0.12);
-  animation: hero-orbit-spin-reverse 110s linear infinite;
-}
-
-.hero-orbit-field__ring--b {
-  width: 58%;
-  height: 88%;
-  border-color: rgba(96, 165, 250, 0.1);
-  animation: hero-orbit-spin 140s linear infinite;
-}
-
-.hero-orbit-field__ring--c {
-  width: 96%;
-  height: 72%;
-  border-color: rgba(167, 139, 250, 0.08);
-  animation: hero-orbit-spin-reverse 160s linear infinite;
-}
-
-.hero-orbit-field__spark {
+.hero-intel__halo {
   position: absolute;
-  top: 0;
+  inset: -6%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.28) 0%, rgba(76, 29, 149, 0.1) 36%, transparent 66%);
+  filter: blur(18px);
+  animation: hero-intel-fade 1.5s ease both, hero-intel-breathe 16s ease-in-out 1.4s infinite;
+}
+
+.hero-intel__sphere {
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse 42% 16% at 50% 0%, rgba(255, 255, 255, 0.88), rgba(214, 201, 255, 0.32) 30%, transparent 68%),
+    radial-gradient(circle at 50% 44%, rgba(167, 139, 250, 0.07) 0%, rgba(59, 24, 110, 0.16) 46%, rgba(5, 5, 9, 0.28) 62%, transparent 74%);
+  box-shadow:
+    inset 0 0 90px rgba(88, 28, 135, 0.12),
+    0 0 90px rgba(109, 40, 217, 0.16);
+  animation: hero-intel-fade 1.7s ease 0.08s both;
+}
+
+.hero-intel__globe {
+  position: absolute;
+  inset: 4%;
+  width: 92%;
+  height: 92%;
+  overflow: visible;
+  animation: hero-intel-fade 1.8s ease 0.12s both;
+}
+
+.hero-intel__sphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(196, 181, 253, 0.28) 10%, rgba(139, 92, 246, 0.08) 36%, rgba(139, 92, 246, 0.02) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.hero-intel__crest {
+  position: absolute;
+  left: 50%;
+  top: -1%;
+  width: 46%;
+  height: 14%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.95) 0%, rgba(226, 216, 255, 0.55) 28%, transparent 72%);
+  filter: blur(6px);
+}
+
+.hero-intel__ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  border: 1px solid rgba(210, 196, 255, 0.28);
+  opacity: 0;
+}
+
+.hero-intel__ring--a {
+  width: 128%;
+  height: 46%;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  animation: hero-intel-fade 1.8s ease 0.28s forwards, hero-intel-spin-a 220s linear infinite;
+}
+
+.hero-intel__ring--b {
+  width: 108%;
+  height: 72%;
+  border-color: rgba(165, 170, 255, 0.2);
+  transform: translate(-50%, -50%) rotate(24deg);
+  animation: hero-intel-fade 2s ease 0.42s forwards, hero-intel-spin-b 280s linear infinite;
+}
+
+.hero-intel__ring--c {
+  width: 146%;
+  height: 34%;
+  border-color: rgba(196, 181, 253, 0.16);
+  transform: translate(-50%, -50%) rotate(8deg);
+  animation: hero-intel-fade 2.1s ease 0.5s forwards, hero-intel-spin-c 320s linear infinite;
+}
+
+.hero-intel__node {
+  position: absolute;
+  top: -2px;
   left: 50%;
   width: 4px;
   height: 4px;
   margin-left: -2px;
-  margin-top: -2px;
   border-radius: 50%;
-  background: #c4b5fd;
-  box-shadow: 0 0 12px rgba(139, 92, 246, 0.7);
+  background: #efeaff;
+  box-shadow: 0 0 10px rgba(196, 181, 253, 0.85);
 }
 
-.hero-orbit-field__star {
+.hero-intel__node--quiet {
+  width: 3px;
+  height: 3px;
+  opacity: 0.7;
+  background: #c7d2fe;
+  box-shadow: 0 0 8px rgba(129, 140, 248, 0.6);
+}
+
+.hero-intel__particle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(226, 232, 240, 0.8);
-  box-shadow: 0 0 8px rgba(167, 139, 250, 0.45);
-  animation: atmosphere-star 28s ease-in-out infinite;
+  background: rgba(237, 233, 254, 0.9);
+  box-shadow: 0 0 8px rgba(167, 139, 250, 0.55);
+  animation: hero-intel-drift 26s ease-in-out infinite;
 }
 
-@keyframes hero-orbit-spin {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+.hero-intel__floor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: min(34vh, 280px);
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 16%, #000 58%, transparent 100%);
+  mask-image: linear-gradient(to top, transparent 0%, #000 16%, #000 58%, transparent 100%);
+  animation: hero-intel-fade 2s ease 0.4s forwards;
 }
 
-@keyframes hero-orbit-spin-reverse {
-  from { transform: translate(-50%, -50%) rotate(12deg); }
-  to { transform: translate(-50%, -50%) rotate(-348deg); }
+.hero-intel__horizon {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  width: min(760px, 72vw);
+  height: 90px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(139, 92, 246, 0.28), transparent 70%);
+  filter: blur(10px);
+  opacity: 0;
+  animation: hero-intel-fade 1.8s ease 0.3s forwards, hero-intel-pulse 12s ease-in-out 1.8s infinite;
+}
+
+.hero-intel__vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #030305 0%, transparent 12%, transparent 88%, #030305 100%),
+    linear-gradient(to bottom, rgba(3, 3, 5, 0.45) 0%, transparent 14%, transparent 72%, #020205 100%);
+}
+
+.hero-intel__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(1040px, calc(100% - 40px));
+  flex-direction: column;
+  align-items: center;
+  padding: 104px 0 88px;
+  text-align: center;
+}
+
+.hero-intel__eyebrow {
+  margin: 0;
+  color: rgba(214, 201, 255, 0.78);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  animation: hero-intel-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
+}
+
+.hero-intel__title-wrap {
+  container-type: inline-size;
+  width: min(820px, 100%);
+}
+
+.hero-intel__title {
+  width: 100%;
+  margin: 22px 0 0;
+  color: #fff;
+  font-size: clamp(1.75rem, 8.3cqi, 4.6rem);
+  font-weight: 500;
+  letter-spacing: -0.046em;
+  line-height: 0.98;
+  animation: hero-intel-rise 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.32s both;
+}
+
+.hero-intel__title span {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-intel__accent {
+  background-image: linear-gradient(100deg, #f4f0ff 0%, #ddd4ff 42%, #c4b5fd 78%, #b3a0f4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-intel__copy {
+  max-width: 700px;
+  margin: 28px 0 0;
+  color: #a1a1aa;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  animation: hero-intel-rise 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+.hero-intel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+  animation: hero-intel-rise 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.68s both;
+}
+
+.hero-intel__scroll {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.55);
+  transform: translateX(-50%);
+  animation: hero-intel-fade 1s ease 0.9s both;
+}
+
+.hero-intel__scroll-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.hero-intel__scroll-line {
+  position: relative;
+  width: 1px;
+  height: 42px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.45), rgba(167, 139, 250, 0.05));
+}
+
+.hero-intel__scroll-dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ddd6fe;
+  box-shadow: 0 0 10px rgba(196, 181, 253, 0.9);
+  animation: hero-intel-scroll 2.8s ease-in-out infinite;
+}
+
+@keyframes hero-intel-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes hero-intel-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes hero-intel-breathe {
+  0%, 100% { opacity: 0.72; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes hero-intel-pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.85; }
+}
+
+@keyframes hero-intel-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.28; }
+  50% { transform: translate3d(7px, -11px, 0); opacity: 0.8; }
+}
+
+@keyframes hero-intel-spin-a {
+  from { transform: translate(-50%, -50%) rotate(-18deg); }
+  to { transform: translate(-50%, -50%) rotate(342deg); }
+}
+
+@keyframes hero-intel-spin-b {
+  from { transform: translate(-50%, -50%) rotate(24deg); }
+  to { transform: translate(-50%, -50%) rotate(-336deg); }
+}
+
+@keyframes hero-intel-spin-c {
+  from { transform: translate(-50%, -50%) rotate(8deg); }
+  to { transform: translate(-50%, -50%) rotate(368deg); }
+}
+
+@keyframes hero-intel-scroll {
+  0% { transform: translate(-50%, 0); opacity: 0.2; }
+  45% { opacity: 1; }
+  100% { transform: translate(-50%, 32px); opacity: 0; }
+}
+
+@media (max-width: 1024px) {
+  .hero-intel__core {
+    width: min(720px, 90vw, 78vh);
+  }
+
+  .hero-intel__title {
+    font-size: clamp(1.7rem, 6.5cqi, 3.4rem);
+  }
+
+  .hero-intel__ring--c,
+  .hero-intel__satellite,
+  .hero-intel__trail--fine {
+    display: none;
+  }
+
+  .hero-intel__halo,
+  .hero-intel__trail-glow {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-intel__content {
+    width: min(640px, calc(100% - 36px));
+    padding-top: 108px;
+  }
+
+  .hero-intel__ring--b,
+  .hero-intel__particle:nth-child(n + 9),
+  .hero-intel__trail-glow {
+    display: none;
+  }
+
+  .hero-intel__core {
+    top: 44%;
+    width: min(540px, 132vw);
+  }
+
+  .hero-intel__copy {
+    font-size: 14px;
+  }
+
+  .hero-intel__actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-intel__eyebrow {
+    letter-spacing: 0.16em;
+    font-size: 10px;
+  }
+}
+
+@media (max-height: 860px) and (min-width: 801px) {
+  .hero-intel__title {
+    font-size: clamp(1.65rem, 7cqi, 3.7rem);
+  }
+}
+
+@media (max-height: 760px) {
+  .hero-intel__scroll {
+    display: none;
+  }
+
+  .hero-intel__content {
+    padding-top: 96px;
+    padding-bottom: 36px;
+  }
+
+  .hero-intel__copy {
+    margin-top: 18px;
+  }
+
+  .hero-intel__actions {
+    margin-top: 22px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -313,10 +683,6 @@
 
 @media (max-width: 800px) {
   .site-atmosphere__orbits,
-  .hero-orbit-field__ring--a,
-  .hero-orbit-field__ring--b,
-  .hero-orbit-field__ring--c,
-  .hero-orbit-field__spark,
   .site-atmosphere__particle--5,
   .site-atmosphere__particle--6,
   .site-atmosphere__particle--7,
@@ -333,23 +699,46 @@
     opacity: 0.4;
   }
 
-  .hero-orbit-field__ring--core {
-    animation: none;
-    opacity: 0.55;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .site-atmosphere__glow,
   .site-atmosphere__orbit,
   .site-atmosphere__particle,
-  .hero-orbit-field__ring,
-  .hero-orbit-field__star {
+  .hero-intel__wash,
+  .hero-intel__trails,
+  .hero-intel__trail-glow,
+  .hero-intel__halo,
+  .hero-intel__sphere,
+  .hero-intel__ring,
+  .hero-intel__particle,
+  .hero-intel__floor,
+  .hero-intel__horizon,
+  .hero-intel__eyebrow,
+  .hero-intel__title,
+  .hero-intel__copy,
+  .hero-intel__actions,
+  .hero-intel__scroll,
+  .hero-intel__scroll-dot {
     animation: none !important;
   }
 
+  .hero-intel__wash,
+  .hero-intel__trails,
+  .hero-intel__halo,
+  .hero-intel__sphere,
+  .hero-intel__ring,
+  .hero-intel__floor,
+  .hero-intel__horizon,
+  .hero-intel__eyebrow,
+  .hero-intel__title,
+  .hero-intel__copy,
+  .hero-intel__actions,
+  .hero-intel__scroll {
+    opacity: 1;
+  }
+
   .site-atmosphere__spark,
-  .hero-orbit-field__spark,
   .site-atmosphere__particles {
     display: none;
   }

@@ -25,15 +25,6 @@ const socialLinks = [
 
 const footerColumns: FooterColumn[] = [
   {
-    heading: 'Products',
-    links: [
-      { label: 'Agentic Brain', href: '/products/agentic-brain' },
-      { label: 'AI Digital Twin', href: '/products/ai-digital-twin' },
-      { label: 'Photonic Brain', href: '/products/photonic-brain', badge: 'NEW' },
-      { label: 'AGIx', href: '/products/agix' },
-    ],
-  },
-  {
     heading: 'Solutions',
     links: [
       { label: 'Campus', href: '/solutions/campus' },

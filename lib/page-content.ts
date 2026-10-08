@@ -48,11 +48,6 @@ export const pageContent: Record<string, PageContent> = {
       'Every engagement begins with context. We assess objectives, people, processes, knowledge, data and risk; then design, pilot and scale.',
     items: ['Personalized agents', 'Agentic Brain', 'Agentic enterprises', 'PolymathGround startups', 'QaQ Passport', 'Agentic ARMY'],
   },
-  products: {
-    title: 'Tools for human-directed intelligence.',
-    intro: 'Purpose-built systems that turn knowledge into agency while keeping people accountable and in control.',
-    items: ['AI Employees', 'Agentic Brain', 'AI Business Engine', 'Custom AI Systems'],
-  },
   'services/personalized-agents': {
     title: 'From AI That Responds to AI That Understands You.',
     intro:
@@ -121,11 +116,6 @@ export const pageContent: Record<string, PageContent> = {
     title: 'An ecosystem for the agentic era.',
     intro: 'Connect learners, founders, institutions, solution providers and opportunities through shared infrastructure.',
     items: ['AGIx', 'PolymathGround', 'QaQ Passport', 'Agentic ARMY', 'Marketplace'],
-  },
-  'products/agix': {
-    title: 'Shared infrastructure for the agentic era.',
-    intro: 'Connect learners, founders, institutions, solution providers and opportunities through shared infrastructure.',
-    items: ['PolymathGround', 'QaQ Passport', 'Agentic ARMY', 'Marketplace', 'Shared infrastructure'],
   },
   company: {
     title: 'Building responsibly, in public.',

@@ -24,7 +24,7 @@ export type NavDropdown = {
   href: string
   aliases?: string[]
   columns: DropdownColumn[]
-  layout: 'solutions' | 'services' | 'product' | 'company'
+  layout: 'solutions' | 'services' | 'company'
   media?: {
     src: string
     alt: string

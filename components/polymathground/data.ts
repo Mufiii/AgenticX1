@@ -171,7 +171,6 @@ export const ecosystemStages: EcosystemStage[] = [
   {
     title: 'Agentic Brain',
     description: 'Personalized Intelligence',
-    href: '/products/agentic-brain',
   },
   {
     title: 'Projects / Research / Startups',
