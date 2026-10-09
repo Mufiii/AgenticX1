@@ -1,4 +1,3 @@
-```yaml
 version: 1
 
 frontend:
@@ -19,4 +18,3 @@ frontend:
     paths:
       - node_modules/**/*
       - .next/cache/**/*
-```
