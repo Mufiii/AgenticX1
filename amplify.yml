@@ -1,21 +1,22 @@
-
+```yaml
 version: 1
+
 frontend:
   phases:
     preBuild:
       commands:
-        - corepack enable
-        - corepack prepare pnpm@9.15.5 --activate
-        - pnpm --version
-        - pnpm install --frozen-lockfile
+        - npm ci
     build:
       commands:
-        - pnpm run build
+        - npm run build
+
   artifacts:
     baseDirectory: .next
     files:
       - '**/*'
+
   cache:
     paths:
       - node_modules/**/*
-      - .pnpm-store/**/*
+      - .next/cache/**/*
+```
